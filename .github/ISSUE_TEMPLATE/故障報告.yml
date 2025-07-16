@@ -13,6 +13,7 @@ body:
       label: "故障の概要"
       description: "簡潔に故障の内容を記入してください"
       placeholder: "例：プリンターが動作しません"
+    validations:
       required: true
   - type: textarea
     id: details
@@ -20,6 +21,7 @@ body:
       label: "詳細な状況"
       description: "故障が発生した状況や経緯を詳しく記入してください"
       placeholder: "例：電源を入れても反応しません。エラーメッセージは出ません。"
+    validations:
       required: true
   - type: input
     id: steps
@@ -41,4 +43,5 @@ body:
         - 高
         - 中
         - 低
+    validations:
       required: true
