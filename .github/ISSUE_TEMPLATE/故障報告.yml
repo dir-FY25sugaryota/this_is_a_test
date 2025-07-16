@@ -1,0 +1,44 @@
+name: 故障報告
+description: 製品やサービスの故障やトラブルを報告してください
+title: "[故障] "
+labels: ["bug", "故障"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 故障内容の詳細を記入してください
+  - type: input
+    id: summary
+    attributes:
+      label: "故障の概要"
+      description: "簡潔に故障の内容を記入してください"
+      placeholder: "例：プリンターが動作しません"
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "詳細な状況"
+      description: "故障が発生した状況や経緯を詳しく記入してください"
+      placeholder: "例：電源を入れても反応しません。エラーメッセージは出ません。"
+      required: true
+  - type: input
+    id: steps
+    attributes:
+      label: "再現手順"
+      description: "故障を再現するための手順を記入してください"
+      placeholder: "例：1. 電源を入れる 2. ボタンを押す"
+  - type: input
+    id: device
+    attributes:
+      label: "故障した機器・デバイス"
+      description: "どの機器やデバイスで故障が起きたか記入してください"
+      placeholder: "例：プリンターA-1234"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "優先度"
+      options:
+        - 高
+        - 中
+        - 低
+      required: true
