@@ -1,16 +1,68 @@
-故障連絡票:
-  故障番号: {故障番号}
-  発生日時: {発生日時}
-  故障概要: {故障の概要}
-  詳細情報:
-    内容: |
-      {故障詳細本文}
-  影響範囲: {影響範囲}
-  連絡先:
-    担当者: {担当者名}
-    連絡先: {連絡先メールまたは電話}
-  先行資材: {資材名やID}
-  後続資材: {資材名やID}
-  対応期限: {YYYY-MM-DD}
-  備考・注意事項: |
-      {必要に応じて追加情報や注意点}
+name: 故障連絡票
+description: 故障の連絡・通知に必要な情報を記入してください
+title: "[故障連絡] "
+labels: ["故障", "連絡票"]
+body:
+  - type: input
+    id: fault_number
+    attributes:
+      label: "故障番号"
+      description: "故障管理番号を入力してください"
+      placeholder: "例：12345"
+      required: true
+  - type: input
+    id: occurrence_date
+    attributes:
+      label: "発生日時"
+      description: "故障が発生した日時を入力してください"
+      placeholder: "例：2023-07-20 10:00"
+      required: true
+  - type: input
+    id: fault_summary
+    attributes:
+      label: "故障概要"
+      description: "故障の概要を簡潔に記入してください"
+      placeholder: "例：サーバーダウン"
+      required: true
+  - type: textarea
+    id: fault_details
+    attributes:
+      label: "詳細情報"
+      description: "故障の詳細な内容を記入してください"
+      placeholder: "例：電源が入らず、再起動しても復旧しません。"
+  - type: input
+    id: impact_scope
+    attributes:
+      label: "影響範囲"
+      description: "故障の影響範囲を記入してください"
+      placeholder: "例：全社システム停止"
+  - type: input
+    id: contact_person
+    attributes:
+      label: "連絡先（担当者名）"
+      description: "連絡先の担当者名を記入してください"
+      placeholder: "例：山田太郎"
+  - type: input
+    id: contact_info
+    attributes:
+      label: "連絡先（メール・電話）"
+      description: "担当者のメールアドレスや電話番号を記入してください"
+      placeholder: "例：yamada@example.com / 090-1234-5678"
+  - type: input
+    id: preceding_material
+    attributes:
+      label: "先行資材"
+      description: "先行して関わる資材名やIDを記入してください"
+      placeholder: "例：資材A-123"
+  - type: input
+    id: subsequent_material
+    attributes:
+      label: "後続資材"
+      description: "後続して関わる資材名やIDを記入してください"
+      placeholder: "例：資材B-456"
+  - type: input
+    id: due_date
+    attributes:
+      label: "対応期限"
+      description: "対応の期限を入力してください"
+      placeholder: "例：2023-07-25"
