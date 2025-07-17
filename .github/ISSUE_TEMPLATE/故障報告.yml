@@ -3,6 +3,12 @@ description: 製品やサービスの故障やトラブルを報告してくだ�
 title: "[故障] "
 labels: ["bug", "故障"]
 body:
+  - type: input
+    id: fault_id
+    attributes:
+      label: "故障管理ID"
+      description: "この故障に付与する管理番号を入力してください"
+      placeholder: "例：FK-20230720-001"
   - type: markdown
     attributes:
       value: |
