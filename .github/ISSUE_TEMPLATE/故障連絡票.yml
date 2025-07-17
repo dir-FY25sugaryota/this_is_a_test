@@ -9,6 +9,7 @@ body:
       label: "故障番号"
       description: "故障管理番号を入力してください"
       placeholder: "例：12345"
+    validations:
       required: true
   - type: input
     id: occurrence_date
@@ -16,6 +17,7 @@ body:
       label: "発生日時"
       description: "故障が発生した日時を入力してください"
       placeholder: "例：2023-07-20 10:00"
+    validations:
       required: true
   - type: input
     id: fault_summary
@@ -23,6 +25,7 @@ body:
       label: "故障概要"
       description: "故障の概要を簡潔に記入してください"
       placeholder: "例：サーバーダウン"
+    validations:
       required: true
   - type: textarea
     id: fault_details
